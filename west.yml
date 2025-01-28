@@ -11,8 +11,12 @@ manifest:
   projects:
     - name: hal_silabs
       remote: silabs
-      revision: f0c624e9fdfa1d004b06a73054b5b4ebeda3774a
+      revision: pull/15/head
       path: modules/hal/silabs
+    - name: zephyr-mbedtls
+      remote: silabs
+      revision: pull/1/head
+      path: modules/crypto/mbedtls
     - name: zephyr
       remote: zephyrproject-rtos
       revision: 222f8d87b546c5e91ce132449b4fd41d55ed7207
@@ -22,5 +26,4 @@ manifest:
         name-allowlist:
           - cmsis      # required by the ARM port
           - hal_silabs # required by Silabs boards
-          - mbedtls    # required e.g. by Bluetooth
           - tinycrypt  # required e.g. by Bluetooth

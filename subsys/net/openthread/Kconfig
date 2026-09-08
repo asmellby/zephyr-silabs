@@ -1,0 +1,44 @@
+# Copyright (c) 2026 Silicon Laboratories Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+if OPENTHREAD
+
+config OPENTHREAD_LIBRARY_SUPPORTED
+	bool
+	default y
+	depends on OPENTHREAD_THREAD_VERSION_1_4
+	depends on !OPENTHREAD_COPROCESSOR
+	
+	# TODO: Add additional rules
+
+choice OPENTHREAD_IMPLEMENTATION
+	default OPENTHREAD_SOURCES
+
+config OPENTHREAD_LIBRARY
+	bool "OpenThread prebuilt stack library"
+	select OPENTHREAD_DIAG
+	help
+	  Use prebuilt OpenThread stack libraries that could be used for certification by
+	  inheritance. Uses default certification configurations. Note: Please refer to the
+	  release notes for Simplicity SDK to verify if the SDK has been qualified for
+	  certification.
+
+endchoice
+
+if OPENTHREAD_LIBRARY
+
+config OPENTHREAD_LIBRARY_DEFAULT
+	bool
+	default y if !OPENTHREAD_MULTIPLE_INSTANCE && !OPENTHREAD_COAP
+
+config OPENTHREAD_LIBRARY_COAP
+	default y if !OPENTHREAD_MULTIPLE_INSTANCE && OPENTHREAD_COAP
+	bool
+
+config OPENTHREAD_LIBRARY_COAP_MI
+	bool
+	default y if OPENTHREAD_MULTIPLE_INSTANCE && OPENTHREAD_COAP
+
+endif
+
+endif

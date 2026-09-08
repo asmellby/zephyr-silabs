@@ -21,6 +21,8 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: silabs
       url-base: https://github.com/siliconlabssoftware
+    - name: asmellby
+      url-base: https://github.com/asmellby
 
   projects:
     - name: zephyr
@@ -40,7 +42,6 @@ manifest:
           - lvgl
           - mbedtls
           - mldsa-native
-          - openthread
           - picolibc
           - segger
           - zcbor
@@ -59,6 +60,10 @@ manifest:
       revision: 495a207fb17938041cad5d419fba1275b076c39f
       path: modules/crypto/tf-psa-crypto
     - name: zephyr-hal-silabs-extra
-      remote: silabs
-      revision: 5f7327c94bd73116bc92cb220d3c85356a57fe11
+      remote: asmellby
+      revision: ce40265406d7562d05afaed6fa828f6d63cb9444
       path: modules/hal/silabs_extra
+    - name: zephyr-openthread
+      remote: asmellby
+      revision: 788b21174826222c62b5cbbf1027a5eb92ee5ffb
+      path: modules/lib/openthread

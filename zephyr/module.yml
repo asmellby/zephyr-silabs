@@ -21,6 +21,9 @@ build:
     # Zephyr will use the `<soc_root>/soc` for additional socs. The `.` is the
     # root of this repository.
     soc_root: .
+    # Zephyr will use the `<module_ext_root>` directory for build system
+    # integration for other modules. The `.` is the root of this repository.
+    module_ext_root: .
 samples:
   - samples
 tests:

@@ -21,6 +21,8 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: silabs
       url-base: https://github.com/siliconlabssoftware
+    - name: asmellby
+      url-base: https://github.com/asmellby
 
   projects:
     - name: zephyr
@@ -45,8 +47,8 @@ manifest:
           - segger
           - zcbor
     - name: hal_silabs
-      remote: silabs
-      revision: 80751f9d28b9f96b154fd70f36d562ff3f10dd40
+      remote: asmellby
+      revision: feature/pake-accel
       path: modules/hal/silabs
     - name: mcuboot
       remote: silabs
@@ -54,9 +56,9 @@ manifest:
       revision: 40fbecd086a72f479fcfdce1172cbab9db87f4cd
       path: bootloader/mcuboot
     - name: tf-psa-crypto
-      remote: silabs
-      repo-path: zephyr-tf-psa-crypto
-      revision: 495a207fb17938041cad5d419fba1275b076c39f
+      remote: asmellby
+      repo-path: tf-psa-crypto
+      revision: feature/pake-accel
       path: modules/crypto/tf-psa-crypto
     - name: zephyr-hal-silabs-extra
       remote: silabs

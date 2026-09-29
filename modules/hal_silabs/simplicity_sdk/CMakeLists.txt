@@ -66,6 +66,7 @@ zephyr_library_sources_ifdef(CONFIG_PSA_CRYPTO_DRIVER_SILABS_HSE
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_driver_key_derivation.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_driver_key_management.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_driver_mac.c
+  ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_driver_pake.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_driver_signature.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_opaque_driver_aead.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_opaque_driver_cipher.c
@@ -75,6 +76,7 @@ zephyr_library_sources_ifdef(CONFIG_PSA_CRYPTO_DRIVER_SILABS_HSE
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_transparent_driver_cipher.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_transparent_driver_hash.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_transparent_driver_mac.c
+  ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_transparent_driver_pake.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_transparent_key_derivation.c
   ${SECURITY_DIR}/sl_component/sl_psa_driver/src/sli_se_version_dependencies.c
 )

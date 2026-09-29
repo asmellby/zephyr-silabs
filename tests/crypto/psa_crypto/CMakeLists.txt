@@ -15,6 +15,7 @@ target_sources(app PRIVATE
   src/mac.c
   src/sign.c
   src/key_agreement.c
+  src/pake.c
 )
 
 # Use CMake variables to configure testcase, since Kconfig can't be defined
